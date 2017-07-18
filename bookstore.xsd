@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.jbt.org/bookstore" 
+		xmlns:tns="http://www.jbt.org/bookstore" 
+		elementFormDefault="qualified">
+		
+	<!-- xml structure -->
+	<element name="bookstore">
+		<complexType>
+			<sequence>
+				<element name="book" type="tns:book" minOccurs="0" maxOccurs="unbounded"></element>
+			</sequence>
+		</complexType>
+	</element>
+	
+		<!-- types -->
+		<!-- books -->
+		
+		<complexType name="book">
+			<sequence>
+				<element name="isbn" type="ID"></element>			
+				<element name="title" type="string"></element>			
+				<element name="author" type="string"></element>			
+				<element name="price" type="double"></element>			
+			</sequence>
+		</complexType>
+</schema>
